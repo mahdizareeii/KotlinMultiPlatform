@@ -1,6 +1,16 @@
 import android.os.Build
+import io.ktor.client.engine.HttpClientEngineFactory
+import io.ktor.client.engine.cio.CIO
+import org.koin.core.module.Module
 
-class AndroidPlatform : Platform {
+class AndroidPlatform(
+    override val module: List<Module> = listOf(
+        org.koin.dsl.module {
+
+        }
+    ),
+    override val httpEngine: HttpClientEngineFactory<*> = CIO
+) : Platform {
     override val name: String = "Android ${Build.VERSION.SDK_INT}"
 }
 
