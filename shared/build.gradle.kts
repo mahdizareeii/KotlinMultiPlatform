@@ -30,6 +30,10 @@ kotlin {
     jvm()
 
     sourceSets {
+        all {
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
+        }
+
         androidMain.dependencies {
             implementation(libs.koin.android)
             implementation(libs.koin.compose)
