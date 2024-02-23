@@ -3,7 +3,6 @@ package org.example.project.screen
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -11,7 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import componentdata.products.ProductComponentData
-import org.example.project.components.products.ProductComponent
+import org.example.project.component.products.ProductComponent
 import org.koin.androidx.compose.getViewModel
 import state.BaseUiState
 import viewmodel.ProductsViewModel
