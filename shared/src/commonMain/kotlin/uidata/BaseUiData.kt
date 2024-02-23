@@ -1,3 +1,0 @@
-package uidata
-
-interface BaseUiData

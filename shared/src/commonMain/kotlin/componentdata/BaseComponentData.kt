@@ -1,0 +1,3 @@
+package componentdata
+
+interface BaseComponentData

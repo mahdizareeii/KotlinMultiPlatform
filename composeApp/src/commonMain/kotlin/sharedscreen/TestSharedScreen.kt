@@ -1,3 +1,6 @@
+package sharedscreen
+
+import Greeting
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -17,7 +20,7 @@ import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun App() {
+fun TestSharedScreen() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         val greeting = remember { Greeting().greet() }

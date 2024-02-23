@@ -1,9 +1,9 @@
 package state
 
-import uidata.BaseUiData
+import componentdata.BaseComponentData
 import util.Switch
 
 data class ProductsUiState(
     val initData: Switch<Boolean> = Switch(false, false),
-    val products: List<BaseUiData> = listOf()
+    val products: List<BaseComponentData> = listOf()
 )
