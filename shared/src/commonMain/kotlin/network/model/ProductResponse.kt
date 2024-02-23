@@ -6,35 +6,35 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ProductResponse(
     @SerialName("description")
-    val description: String,
+    val description: String?,
     @SerialName("end_date")
-    val endDate: String,
+    val endDate: String?,
     @SerialName("gamerpower_url")
-    val gamerpowerUrl: String,
+    val gamerpowerUrl: String?,
     @SerialName("id")
-    val id: Int,
+    val id: Int?,
     @SerialName("image")
-    val image: String,
+    val image: String?,
     @SerialName("instructions")
-    val instructions: String,
+    val instructions: String?,
     @SerialName("open_giveaway")
-    val openGiveaway: String,
+    val openGiveaway: String?,
     @SerialName("open_giveaway_url")
-    val openGiveawayUrl: String,
+    val openGiveawayUrl: String?,
     @SerialName("platforms")
-    val platforms: String,
+    val platforms: String?,
     @SerialName("published_date")
-    val publishedDate: String,
+    val publishedDate: String?,
     @SerialName("status")
-    val status: String,
+    val status: String?,
     @SerialName("thumbnail")
-    val thumbnail: String,
+    val thumbnail: String?,
     @SerialName("title")
-    val title: String,
+    val title: String?,
     @SerialName("type")
-    val type: String,
+    val type: String?,
     @SerialName("users")
-    val users: Int,
+    val users: Int?,
     @SerialName("worth")
-    val worth: String
+    val worth: String?
 )

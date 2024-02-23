@@ -9,6 +9,8 @@ plugins {
 }
 
 kotlin {
+    /*
+    //comment web
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -18,7 +20,7 @@ kotlin {
             }
         }
         binaries.executable()
-    }
+    }*/
     
     androidTarget {
         compilations.all {
@@ -102,6 +104,8 @@ android {
     }
 }
 
+/*
+//comment desktop
 compose.desktop {
     application {
         mainClass = "MainKt"
@@ -112,8 +116,10 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
-}
+}*/
 
+/*
+//comment web
 compose.experimental {
     web.application {}
-}
+}*/

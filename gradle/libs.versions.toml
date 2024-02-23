@@ -28,6 +28,9 @@ koin-compose = "3.4.2"
 kotlin-pluging-serialization = "1.6.21"
 kotlin-annotation = "1.7.1"
 
+kmm-viewModel = "1.0.0-ALPHA-19"
+lifecycleViewmodelCompose = "2.7.0"
+
 [libraries]
 
 kotlin-annotation = { module = "androidx.annotation:annotation", version.ref = "kotlin-annotation" }
@@ -64,6 +67,9 @@ ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "kto
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor-server" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor-server" }
 
+kmm-viewModel = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version.ref = "kmm-viewModel" }
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -73,3 +79,4 @@ kotlinxSerialization = { id = "kotlinx-serialization" }
 kotlinPlugingSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-pluging-serialization" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-server" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kmpNativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmm-viewModel" }

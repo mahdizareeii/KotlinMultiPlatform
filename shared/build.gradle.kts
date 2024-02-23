@@ -1,17 +1,20 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+//import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kmpNativeCoroutines)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
 }
 
 kotlin {
+    /*
+    //comment web
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
        browser()
-    }
-    
+    }*/
+
     androidTarget {
         compilations.all {
             kotlinOptions {
@@ -19,15 +22,17 @@ kotlin {
             }
         }
     }
-    
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
-    
+
     jvm()
-    
+
     sourceSets {
         androidMain.dependencies {
+            implementation(libs.koin.android)
+            implementation(libs.koin.compose)
             implementation(libs.ktor.client.cio)
         }
 
@@ -40,6 +45,7 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.json)
             implementation(libs.ktor.client.content.negotiation)
+            api(libs.kmm.viewModel)
         }
 
         iosMain.dependencies {

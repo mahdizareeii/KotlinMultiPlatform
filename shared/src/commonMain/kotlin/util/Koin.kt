@@ -1,5 +1,7 @@
 package util
 
+import domain.mapper.mapperModule
+import domain.usecase.useCaseModule
 import getPlatform
 import network.api.apiModule
 import network.di.networkModule
@@ -12,6 +14,8 @@ fun initKoin() = startKoin {
             networkModule,
             apiModule,
             repositoryModule,
+            useCaseModule,
+            mapperModule,
             *getPlatform().module.toTypedArray()
         )
     )
