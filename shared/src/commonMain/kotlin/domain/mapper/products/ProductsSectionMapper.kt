@@ -11,7 +11,7 @@ class ProductsSectionMapper : BaseMapper<List<ProductResponseDomain>, List<BaseC
             ProductComponentData(
                 image = it.image,
                 title = it.title,
-                description = it.description + "\n${it.publishedDate} + \n${it.platforms}"
+                description = it.description
             )
         }
     }

@@ -1,12 +1,15 @@
 package org.example.project.screen
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import componentdata.products.ProductComponentData
 import org.example.project.components.products.ProductComponent
 import org.koin.androidx.compose.getViewModel
@@ -32,7 +35,11 @@ fun ProductsScreen(
 
             is BaseUiState.SuccessUiState -> items(state.state.products) {
                 when (it) {
-                    is ProductComponentData -> ProductComponent(data = it)
+                    is ProductComponentData -> ProductComponent(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        data = it
+                    )
+
                     else -> {}
                 }
             }

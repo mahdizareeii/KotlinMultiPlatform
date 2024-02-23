@@ -49,6 +49,9 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.koin.android)
+            implementation(libs.koin.compose)
+            implementation(libs.coil.compose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -99,8 +102,6 @@ android {
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
-        implementation(libs.koin.android)
-        implementation(libs.koin.compose)
     }
 }
 
