@@ -28,7 +28,7 @@ coil-compose = "2.4.0"
 
 kotlin-pluging-serialization = "1.6.21"
 kotlin-annotation = "1.7.1"
-ksp = "1.9.21-1.0.15"
+ksp = "1.9.10-1.0.13"
 kmm-viewModel = "1.0.0-ALPHA-19"
 kmm-coroutines = "1.0.0-ALPHA-25"
 

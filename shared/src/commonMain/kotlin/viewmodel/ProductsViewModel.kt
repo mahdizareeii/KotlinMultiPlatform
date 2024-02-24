@@ -9,7 +9,7 @@ import state.BaseUiState
 import state.ProductsUiState
 import util.Switch
 
-class ProductsViewModel(
+open class ProductsViewModel(
     private val getProductsUseCase: GetProductsUseCase,
     private val productsSectionMapper: ProductsSectionMapper
 ) : BaseViewModel<ProductsUiState>() {
