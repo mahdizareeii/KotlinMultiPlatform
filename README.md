@@ -25,3 +25,18 @@ We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public S
 If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
 
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+
+
+//notice
+
+if your ios project didn't find the shared module "import shared"
+according to this https://blog.jetbrains.com/kotlin/2021/07/multiplatform-gradle-plugin-improved-for-connecting-kmm-modules/
+
+In the Xcode, Run Script build step, change packForXcode to embedAndSignAppleFrameworkForXcode and remove all the passed flags. The task will use the Xcode environment configuration and build only the needed artifact automatically.
+
+this is mine 
+
+    ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode
+    
+    ./gradlew :shared:embedAndSignAppleFrameworkForXcode
