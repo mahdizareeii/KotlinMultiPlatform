@@ -36,5 +36,7 @@ according to this https://blog.jetbrains.com/kotlin/2021/07/multiplatform-gradle
 In the Xcode, Run Script build step, change packForXcode to embedAndSignAppleFrameworkForXcode and remove all the passed flags. The task will use the Xcode environment configuration and build only the needed artifact automatically.
 
 this is mine 
+
     ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode
+    
     ./gradlew :shared:embedAndSignAppleFrameworkForXcode
