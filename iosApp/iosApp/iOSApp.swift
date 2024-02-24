@@ -5,6 +5,7 @@ import shared
 struct iOSApp: App {
 
     init() {
+        //call initKoin() fun in KoinModule.kt in shared module common main
         KoinModuleKt.doInitKoin()
     }
 
