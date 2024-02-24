@@ -29,6 +29,7 @@ You can open the web application by running the `:composeApp:wasmJsBrowserDevelo
 
 
 //notice
+
 if your ios project didn't find the shared module "import shared"
 according to this https://blog.jetbrains.com/kotlin/2021/07/multiplatform-gradle-plugin-improved-for-connecting-kmm-modules/
 
