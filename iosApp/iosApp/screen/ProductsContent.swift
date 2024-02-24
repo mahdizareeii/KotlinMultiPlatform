@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import SwiftUI
+import shared
 import KMMViewModelSwiftUI
 
 struct ProductsContent: View {

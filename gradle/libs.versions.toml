@@ -30,7 +30,7 @@ kotlin-pluging-serialization = "1.6.21"
 kotlin-annotation = "1.7.1"
 
 kmm-viewModel = "1.0.0-ALPHA-19"
-lifecycleViewmodelCompose = "2.7.0"
+kmm-coroutines = "1.0.0-ALPHA-25"
 
 [libraries]
 
@@ -80,4 +80,4 @@ kotlinxSerialization = { id = "kotlinx-serialization" }
 kotlinPlugingSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-pluging-serialization" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-server" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kmpNativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmm-viewModel" }
+kmpNativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmm-coroutines" }
