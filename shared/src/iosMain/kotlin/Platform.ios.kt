@@ -10,12 +10,7 @@ import viewmodel.ProductsViewModel
 class IOSPlatform(
     override val module: List<Module> = listOf(
         module {
-            factory {
-                ProductsViewModel(
-                    getProductsUseCase = get(),
-                    productsSectionMapper = get()
-                )
-            }
+            factory { ProductsViewModel(get(), get()) }
         }
     ),
     override val httpEngine: HttpClientEngineFactory<*> = Darwin

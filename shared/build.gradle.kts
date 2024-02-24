@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kmpNativeCoroutines)
+    alias(libs.plugins.ksp) apply false
     id(libs.plugins.kotlinxSerialization.get().pluginId)
 }
 

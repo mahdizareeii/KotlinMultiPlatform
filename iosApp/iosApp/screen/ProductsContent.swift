@@ -11,11 +11,19 @@ import SwiftUI
 import shared
 import KMMViewModelSwiftUI
 
-struct ProductsContent: View {
+struct ProductsContent : View {
+    
     @StateViewModel var productsViewModel = GetIosViewModel().getProductsViewModel()
+    
     var body: some View {
         LazyVStack(){
             
         }
+    }
+}
+
+struct Products_Previews : PreviewProvider{
+    static var previews: some View {
+        ProductsContent()
     }
 }
