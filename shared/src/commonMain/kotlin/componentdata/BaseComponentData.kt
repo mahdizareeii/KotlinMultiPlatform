@@ -1,3 +1,3 @@
 package componentdata
 
-interface BaseComponentData
+open class BaseComponentData

@@ -6,4 +6,4 @@ data class ProductComponentData(
     val image: String,
     val title: String,
     val description:String
-) : BaseComponentData
+) : BaseComponentData()

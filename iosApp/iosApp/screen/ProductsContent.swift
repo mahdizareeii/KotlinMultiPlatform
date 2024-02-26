@@ -16,14 +16,29 @@ struct ProductsContent : View {
     @StateViewModel var productsViewModel = GetIosViewModel().getProductsViewModel()
     
     var body: some View {
-        LazyVStack(){
-            switch productsViewModel.uiState {
-            case is BaseUiStateLoadingUiState: Text("Loading")
-            case is BaseUiStateEmptyUiState: Text("Empty")
-            case is BaseUiStateSuccessUiState<ProductsUiState>: Text("Success")
-            case is BaseUiStateErrorUiState: Text("Error")
-            default : Text("-")
+        ScrollView(.vertical){
+            LazyVStack(){
+                switch productsViewModel.uiState {
+                case is BaseUiStateLoadingUiState: Text( "Loading")
+                case is BaseUiStateEmptyUiState: Text("Empty")
+                case is BaseUiStateSuccessUiState<ProductsUiState>:
+                    ForEach((productsViewModel.uiState.value(forKey: "state") as? ProductsUiState)?.products ?? [], id: \.self) { uiItem in
+                        generateView(item: uiItem)
+                    }
+                case is BaseUiStateErrorUiState: Text("Error")
+                default : Text("-")
+                }
             }
+        }
+    }
+    
+    @ViewBuilder
+    private func generateView(item: BaseComponentData) -> some View {
+        switch item {
+        case let productData as ProductComponentData:
+            ProductComponent(data: productData).padding(.horizontal, 8).padding(.vertical, 4)
+        default:
+            Text("")
         }
     }
 }
