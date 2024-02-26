@@ -64,6 +64,7 @@ kotlin {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
 
+            implementation(libs.kotlinx.datetime)
             implementation(libs.koin.core)
             implementation(libs.kotlin.annotation)
             implementation(libs.ktor.client.logging)

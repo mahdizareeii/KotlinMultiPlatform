@@ -11,7 +11,14 @@ struct iOSApp: App {
 
 	var body: some Scene {
 		WindowGroup {
-            ProductsContent()
+            TabView {
+                ProductsContent().tabItem {
+                    Text("products")
+                }
+                SharedClockScreenContent().tabItem {
+                    Text("shared screen")
+                }
+            }
 		}
 	}
 }

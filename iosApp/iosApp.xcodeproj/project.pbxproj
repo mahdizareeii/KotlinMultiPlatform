@@ -18,8 +18,9 @@
 		0F3B40672B88C51C00DED79F /* KMPNativeCoroutinesRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3B40662B88C51C00DED79F /* KMPNativeCoroutinesRxSwift */; };
 		0F3B406A2B8A132400DED79F /* KMMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40692B8A132400DED79F /* KMMViewModel.swift */; };
 		0F3B406E2B8C880600DED79F /* ProductComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B406D2B8C880600DED79F /* ProductComponent.swift */; };
+		0F3B40702B8CAE9000DED79F /* SharedClockScreenContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ComposeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ComposeContentView.swift */; };
+		7555FF83242A565900829871 /* TestComposeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* TestComposeContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,10 @@
 		0F3B40582B88B2E500DED79F /* ProductsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsContent.swift; sourceTree = "<group>"; };
 		0F3B40692B8A132400DED79F /* KMMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMViewModel.swift; sourceTree = "<group>"; };
 		0F3B406D2B8C880600DED79F /* ProductComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductComponent.swift; sourceTree = "<group>"; };
+		0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClockScreenContent.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* KotlinMultiPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinMultiPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ComposeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeContentView.swift; sourceTree = "<group>"; };
+		7555FF82242A565900829871 /* TestComposeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComposeContent.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,8 +65,9 @@
 		0F3B40562B88B20E00DED79F /* screen */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF82242A565900829871 /* ComposeContentView.swift */,
+				7555FF82242A565900829871 /* TestComposeContent.swift */,
 				0F3B40582B88B2E500DED79F /* ProductsContent.swift */,
+				0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */,
 			);
 			path = screen;
 			sourceTree = "<group>";
@@ -237,7 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ComposeContentView.swift in Sources */,
+				0F3B40702B8CAE9000DED79F /* SharedClockScreenContent.swift in Sources */,
+				7555FF83242A565900829871 /* TestComposeContent.swift in Sources */,
 				0F3B406A2B8A132400DED79F /* KMMViewModel.swift in Sources */,
 				0F3B40592B88B2E500DED79F /* ProductsContent.swift in Sources */,
 				0F3B406E2B8C880600DED79F /* ProductComponent.swift in Sources */,
