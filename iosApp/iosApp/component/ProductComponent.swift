@@ -22,7 +22,7 @@ struct ProductComponent: View {
             
             VStack(alignment: .leading){
                 Text(data.title)
-                    .font(Font.system(size: 14,weight: .bold))
+                    .font(Font.system(size: 14, weight: .bold))
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                     .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
                 

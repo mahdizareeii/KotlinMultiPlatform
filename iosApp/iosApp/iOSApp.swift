@@ -13,10 +13,10 @@ struct iOSApp: App {
 		WindowGroup {
             TabView {
                 ProductsContent().tabItem {
-                    Text("products")
+                    Text("products").font(Font.system(size: 16, weight: .regular))
                 }
                 SharedClockScreenContent().tabItem {
-                    Text("shared screen")
+                    Text("shared screen").font(Font.system(size: 16, weight: .regular))
                 }
             }
 		}

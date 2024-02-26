@@ -26,7 +26,6 @@ fun ShareCockScreen() {
             LaunchedEffect("clock") {
                 while (true) {
                     time = DateAndTime.getCurrentTimeMillis()
-                    println(time)
                     delay(1000)
                 }
             }
