@@ -36,7 +36,7 @@ fun HomeBottomNavigation(
                 label = {
                     Text(
                         text = item.title,
-                        fontSize = 16.sp
+                        fontSize = 12.sp
                     )
                 },
                 selectedContentColor = Color.Black,
