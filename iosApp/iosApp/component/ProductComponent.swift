@@ -14,13 +14,26 @@ struct ProductComponent: View {
     var data : ProductComponentData
     var body : some View {
         HStack {
-            //TODO load image
-            
+            AsyncImage(url: URL(string: data.image)).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 100).cornerRadius(5)
             VStack{
-                Text(data.title).font(Font.system(size: 14))
+                Text(data.title)
+                    .font(Font.system(size: 14,weight: .bold))
+                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                    .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
+                
                 Spacer().frame(height: 3)
-                Text(data.description).font(Font.system(size: 10))
+                Text(data.description)
+                    .font(Font.system(size: 10, weight: .light))
+                    .lineLimit(3)
+                    .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
             }
         }
+    }
+}
+struct ProductComponent_Preview: PreviewProvider {
+    static var previews: some View {
+        ProductComponent(
+            data: ProductComponentData(image: "test", title: "test", description: "description")
+        )
     }
 }
