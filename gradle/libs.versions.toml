@@ -28,7 +28,7 @@ coil-compose = "2.4.0"
 
 kotlin-pluging-serialization = "1.6.21"
 kotlin-annotation = "1.7.1"
-ksp = "1.9.10-1.0.13"
+ksp = "1.9.21-1.0.15"
 kmm-viewModel = "1.0.0-ALPHA-19"
 kmm-coroutines = "1.0.0-ALPHA-25"
 
@@ -81,4 +81,5 @@ kotlinPlugingSerialization = { id = "org.jetbrains.kotlin.plugin.serialization",
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-server" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kmpNativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmm-coroutines" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}

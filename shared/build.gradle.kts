@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kmpNativeCoroutines)
-    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.ksp)
+    //alias(libs.plugins.kotlinCocoapods)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
 }
 
@@ -33,6 +34,18 @@ kotlin {
             baseName = "shared"
         }
     }
+
+    /*cocoapods {
+        summary = "Some description for the Shared Module"
+        homepage = "Link to the Shared Module homepage"
+        version = "1.0"
+        ios.deploymentTarget = "16.0"
+        podfile = project.file("../iosApp/Podfile")
+        framework {
+            baseName = "shared"
+            isStatic = true
+        }
+    }*/
 
     jvm()
 

@@ -17,7 +17,13 @@ struct ProductsContent : View {
     
     var body: some View {
         LazyVStack(){
-            
+            switch productsViewModel.uiState {
+            case is BaseUiStateLoadingUiState: Text("Loading")
+            case is BaseUiStateEmptyUiState: Text("Empty")
+            case is BaseUiStateSuccessUiState<ProductsUiState>: Text("Success")
+            case is BaseUiStateErrorUiState: Text("Error")
+            default : Text("-")
+            }
         }
     }
 }

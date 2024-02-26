@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.kotlinJvm) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
     alias(libs.plugins.kotlinPlugingSerialization) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.kotlinCocoapods) apply false
 }
 
 tasks.register("clean", Delete::class) {
