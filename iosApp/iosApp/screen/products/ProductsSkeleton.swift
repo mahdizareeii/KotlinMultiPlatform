@@ -11,14 +11,20 @@ import Foundation
 struct ProductsSkeleton: View {
     var body: some View{
         ScrollView{
-            LazyVStack(spacing: 4){
+            LazyVStack{
                 ForEach(0..<10){ _ in
                     Rectangle()
+                        .cornerRadius(4)
+                        .foregroundColor(.gray.opacity(0.3))
                         .frame(height: 100)
-                        .padding()
-                        .modifier(Shimmer())
+                        .padding(.vertical, 4)
+                        .padding(.horizontal, 8)
                 }
             }
+            .modifier(Shimmer())
         }
     }
+}
+#Preview {
+    ProductsSkeleton()
 }

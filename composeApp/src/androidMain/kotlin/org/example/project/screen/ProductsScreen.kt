@@ -21,6 +21,7 @@ import org.example.project.component.products.ProductComponent
 import org.example.project.composeutil.shimmerBrush
 import org.koin.androidx.compose.getViewModel
 import state.BaseUiState
+import state.ProductsUiState
 import viewmodel.ProductsViewModel
 
 @Composable
@@ -33,10 +34,10 @@ fun ProductsScreen(
         modifier = modifier.fillMaxSize()
     ) {
         when (val state = uiState) {
-            is BaseUiState.InitialUiState -> {}
-            is BaseUiState.EmptyUiState -> item { Text(text = "empty") }
-            is BaseUiState.ErrorUiState -> item { Text(text = state.throwable.message.toString()) }
-            is BaseUiState.LoadingUiState -> { item { ProductsSkeleton() } }
+            is BaseUiState.InitialUiState<*> -> {}
+            is BaseUiState.EmptyUiState<*> -> item { Text(text = "empty") }
+            is BaseUiState.ErrorUiState<*> -> item { Text(text = state.throwable.message.toString()) }
+            is BaseUiState.LoadingUiState<*> -> { item { ProductsSkeleton() } }
             is BaseUiState.SuccessUiState -> items(state.state.products) {
                 when (it) {
                     is ProductComponentData -> ProductComponent(
