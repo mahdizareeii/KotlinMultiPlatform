@@ -19,15 +19,17 @@ struct ProductsContent : View {
         ScrollView(.vertical){
             LazyVStack(){
                 switch productsViewModel.uiState {
-                case is BaseUiStateInitialUiState<ProductsUiState>: Text("Initial")
+                case is BaseUiStateInitialUiState<ProductsUiState>: EmptyView()
                 case is BaseUiStateLoadingUiState<ProductsUiState>: ProductsSkeleton()
                 case is BaseUiStateEmptyUiState<ProductsUiState>: Text("Empty")
                 case is BaseUiStateSuccessUiState<ProductsUiState>:
                     ForEach((productsViewModel.uiState.value(forKey: "state") as? ProductsUiState)?.products ?? [], id: \.self) { uiItem in
                         generateView(item: uiItem)
                     }
-                case is BaseUiStateErrorUiState<ProductsUiState>: Text("Error")
-                default : Text(productsViewModel.uiState.description)
+                case let error as BaseUiStateErrorUiState<ProductsUiState>: 
+                    Text(error.throwable.message?.description ?? "error")
+                default : 
+                    EmptyView()
                 }
             }
         }
