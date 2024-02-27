@@ -14,8 +14,12 @@ struct ProductComponent: View {
     var data : ProductComponentData
     var body : some View {
         HStack(alignment:.top){
-            AsyncImage(url: URL(string: data.image))
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 100)
+            AsyncImage(url: URL(string: data.image)){image in
+                image.image?.resizable()
+                    .scaledToFill()
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .clipped()
+            }.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 100)
                 .cornerRadius(5)
             
             Spacer().frame(width: 0).padding(3)
