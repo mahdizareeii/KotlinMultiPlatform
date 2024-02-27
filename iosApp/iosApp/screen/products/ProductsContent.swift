@@ -26,9 +26,12 @@ struct ProductsContent : View {
                     ForEach((productsViewModel.uiState.value(forKey: "state") as? ProductsUiState)?.products ?? [], id: \.self) { uiItem in
                         generateView(item: uiItem)
                     }
-                case let error as BaseUiStateErrorUiState<ProductsUiState>: 
-                    Text(error.throwable.message?.description ?? "error")
-                default : 
+                case let error as BaseUiStateErrorUiState<ProductsUiState>:
+                    Text("Try again \n" + (error.throwable.message?.description ?? "error"))
+                        .onTapGesture {
+                            error.onTryAgainClicked()
+                        }
+                default :
                     EmptyView()
                 }
             }

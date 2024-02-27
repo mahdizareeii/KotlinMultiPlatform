@@ -1,6 +1,7 @@
 package org.example.project.screen
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +22,6 @@ import org.example.project.component.products.ProductComponent
 import org.example.project.composeutil.shimmerBrush
 import org.koin.androidx.compose.getViewModel
 import state.BaseUiState
-import state.ProductsUiState
 import viewmodel.ProductsViewModel
 
 @Composable
@@ -36,8 +36,17 @@ fun ProductsScreen(
         when (val state = uiState) {
             is BaseUiState.InitialUiState<*> -> {}
             is BaseUiState.EmptyUiState<*> -> item { Text(text = "empty") }
-            is BaseUiState.ErrorUiState<*> -> item { Text(text = state.throwable.message.toString()) }
-            is BaseUiState.LoadingUiState<*> -> { item { ProductsSkeleton() } }
+            is BaseUiState.ErrorUiState<*> -> item {
+                Text(
+                    modifier = Modifier.clickable { state.onTryAgainClicked.invoke() },
+                    text = "Try Again \n" + state.throwable.message.toString()
+                )
+            }
+
+            is BaseUiState.LoadingUiState<*> -> {
+                item { ProductsSkeleton() }
+            }
+
             is BaseUiState.SuccessUiState -> items(state.state.products) {
                 when (it) {
                     is ProductComponentData -> ProductComponent(
