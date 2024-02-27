@@ -1,12 +1,14 @@
 package state
 
 sealed class BaseUiState<out UI_STATE> {
-    data object EmptyUiState : BaseUiState<Nothing>()
-    data object InitialUiState : BaseUiState<Nothing>()
-    data class LoadingUiState(val isPartial: Boolean = false, val isFooter: Boolean = false) :
-        BaseUiState<Nothing>()
+    class EmptyUiState<UI_STATE> : BaseUiState<Nothing>()
+    class InitialUiState<UI_STATE> : BaseUiState<Nothing>()
+    data class LoadingUiState<UI_STATE>(
+        val isPartial: Boolean = false,
+        val isFooter: Boolean = false
+    ) : BaseUiState<Nothing>()
 
-    data class ErrorUiState(
+    data class ErrorUiState<UI_STATE>(
         val throwable: Throwable,
         val onTryAgainClicked: () -> Unit = {},
     ) : BaseUiState<Nothing>()

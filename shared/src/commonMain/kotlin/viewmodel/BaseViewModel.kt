@@ -9,7 +9,7 @@ import state.BaseUiState
 open class BaseViewModel<UiState> : KMMViewModel() {
     protected val _uiState = MutableStateFlow<BaseUiState<UiState>>(
         viewModelScope,
-        BaseUiState.InitialUiState
+        BaseUiState.InitialUiState<UiState>()
     )
 
     @NativeCoroutinesState

@@ -3,7 +3,6 @@ package viewmodel
 import com.rickclephas.kmm.viewmodel.coroutineScope
 import domain.mapper.products.ProductsSectionMapper
 import domain.usecase.products.GetProductsUseCase
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import state.BaseUiState
@@ -20,7 +19,7 @@ open class ProductsViewModel(
 
     private fun getProducts() {
         viewModelScope.coroutineScope.launch {
-            _uiState.update { BaseUiState.LoadingUiState() }
+            _uiState.update { BaseUiState.LoadingUiState<ProductsUiState>() }
             try {
                 getProductsUseCase.invoke(Unit).getOrThrow().also { result ->
                     _uiState.update {
@@ -33,7 +32,7 @@ open class ProductsViewModel(
                     }
                 }
             } catch (e: Exception) {
-                _uiState.update { BaseUiState.ErrorUiState(e) }
+                _uiState.update { BaseUiState.ErrorUiState<ProductsUiState>(e) }
             }
 
         }
