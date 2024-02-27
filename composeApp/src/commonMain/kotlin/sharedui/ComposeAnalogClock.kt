@@ -13,6 +13,7 @@ import util.DateAndTimeFromMillis
 
 @Composable
 fun ComposeAnalogClock(
+    modifier: Modifier = Modifier,
     clockBackgroundColor: Color = Color.Black,
     clockThicknessColor: Color = Color.Gray,
     clockHourMarkersColor: Color = Color.White,
@@ -28,7 +29,7 @@ fun ComposeAnalogClock(
     val minute = DateAndTimeFromMillis.getMinuteFromEpochMilliseconds(timeInMillis.invoke())
     val hour = DateAndTimeFromMillis.getHourFromEpochMilliseconds(timeInMillis.invoke())
 
-    Canvas(modifier = Modifier.fillMaxSize()) {
+    Canvas(modifier = modifier) {
         //operate clock radius
         val circleRadius = (size.width / 2f)
         //find center of canvas
