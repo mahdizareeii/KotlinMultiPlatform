@@ -64,6 +64,6 @@ sealed class HomeBottomNavigationItem(
     val title: String,
     val route: String
 ) {
-    data object ProductsScreen : HomeBottomNavigationItem("products", "products_route")
-    data object SharedScreen : HomeBottomNavigationItem("shared screen", "shared_route")
+    data object ProductsScreen : HomeBottomNavigationItem("Specific Ui", "products_route")
+    data object SharedScreen : HomeBottomNavigationItem("Shared Ui", "shared_route")
 }
