@@ -25,7 +25,6 @@ fun ProductViewScreen(
     val args = navController.previousBackStackEntry?.savedStateHandle?.get<ProductViewArgs>(
         "argument"
     )
-    println("loaddedd")
 
     LazyColumn {
         item {
@@ -43,7 +42,7 @@ fun ProductViewScreen(
             Text(
                 text = args?.title ?: "",
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 14.sp,
+                fontSize = 18.sp,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -53,7 +52,7 @@ fun ProductViewScreen(
             Text(
                 text = args?.description ?: "",
                 fontWeight = FontWeight.Light,
-                fontSize = 10.sp,
+                fontSize = 14.sp,
                 maxLines = 3,
                 overflow = TextOverflow.Ellipsis
             )
