@@ -13,7 +13,9 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
+import org.example.project.navgraph.Screens
 
 @Composable
 fun HomeBottomNavigation(
@@ -21,8 +23,8 @@ fun HomeBottomNavigation(
     navController: NavController
 ) {
     val items = listOf(
-        HomeBottomNavigationItem.ProductsScreen,
-        HomeBottomNavigationItem.SharedScreen
+        Screens.ProductsScreen,
+        Screens.SharedScreen
     )
     BottomNavigation(
         backgroundColor = Color.White,
@@ -45,13 +47,16 @@ fun HomeBottomNavigation(
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route) {
-
-                        navController.graph.startDestinationRoute?.let { screen_route ->
-                            popUpTo(screen_route) {
-                                saveState = true
-                            }
+                        // Pop up to the start destination of the graph to
+                        // avoid building up a large stack of destinations
+                        // on the back stack as users select items
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
                         }
+                        // Avoid multiple copies of the same destination when
+                        // reselecting the same item
                         launchSingleTop = true
+                        // Restore state when reselecting a previously selected item
                         restoreState = true
                     }
                 }
@@ -60,10 +65,3 @@ fun HomeBottomNavigation(
     }
 }
 
-sealed class HomeBottomNavigationItem(
-    val title: String,
-    val route: String
-) {
-    data object ProductsScreen : HomeBottomNavigationItem("Specific Ui", "products_route")
-    data object SharedScreen : HomeBottomNavigationItem("Shared Ui", "shared_route")
-}

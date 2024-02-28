@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.ksp)
     //alias(libs.plugins.kotlinCocoapods)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
+    id(libs.plugins.kotlinParcelize.get().pluginId)
 }
 
 kotlin {
@@ -47,7 +48,8 @@ kotlin {
         }
     }*/
 
-    jvm()
+    //comment desktop
+    //jvm()
 
     sourceSets {
         all {

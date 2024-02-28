@@ -55,8 +55,6 @@ fun ProductComponent(
 @Composable
 fun PreviewProductComponent() {
     ProductComponent(
-        data = ProductComponentData(
-            "test", "test title", "test description"
-        )
+        data = ProductComponentData("id",    "test", "test title", "test description")
     )
 }
