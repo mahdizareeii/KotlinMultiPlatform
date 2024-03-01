@@ -12,29 +12,26 @@ Clean Architecture, Domain-Driven Design, MVI.
 ### Shared View Model: 
 Utilizing the KMM-ViewModel library for sharing business logic.
 
-### Ktor for efficient networking.
+**Ktor for efficient networking.**
+**Koin for dependency injection.**
 
-### Koin for dependency injection.
 
 ## iOS Side:
-### Swift UI: 
+**Swift UI:**
 Crafting iOS-specific screens with Swift UI for native iOS experiences.
 
-### Navigation System: 
-Implementing custom navigation graphs for Swift UI screens.
 
-### StateFlow & SharedFlow Publisher: 
-Implementing StateFlow and SharedFlow publishers to observe changes from the ViewModel.
+**Navigation System:** Implementing custom navigation graphs for Swift UI screens.
+
+**StateFlow & SharedFlow Publisher:** Implementing StateFlow and SharedFlow publishers to observe changes from the ViewModel.
 
 ## Android Side:
-### Compose: 
-Creating Android-specific screens with Jetpack Compose for modern UI development.
+**Compose:** Creating Android-specific screens with Jetpack Compose for modern UI development.
 
-### Navigation System:
-Compose Navgraph
+**Navigation System:** Compose Navgraph
 
 ## Shared Screen:
-Compose Multiplatform: Utilizing Compose Multiplatform to share screens between Android and iOS.
+**Compose Multiplatform:** Utilizing Compose Multiplatform to share screens between Android and iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
