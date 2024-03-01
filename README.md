@@ -6,17 +6,15 @@ This is a Kotlin Multiplatform project targeting Android, iOS
 
 # Kotlin Multiplatform project! 🚀
 
-### Architecture: 
-Clean Architecture, Domain-Driven Design, MVI.
+**Architecture:** Clean Architecture, Domain-Driven Design, MVI.
 
-### Shared View Model: 
-Utilizing the KMM-ViewModel library for sharing business logic.
+**Shared View Model:** Utilizing the KMM-ViewModel library for sharing business logic.
 
 **Ktor for efficient networking.**
 **Koin for dependency injection.**
 
 
-## iOS Side:
+# iOS Side:
 **Swift UI:**
 Crafting iOS-specific screens with Swift UI for native iOS experiences.
 
@@ -25,13 +23,15 @@ Crafting iOS-specific screens with Swift UI for native iOS experiences.
 
 **StateFlow & SharedFlow Publisher:** Implementing StateFlow and SharedFlow publishers to observe changes from the ViewModel.
 
-## Android Side:
+# Android Side:
 **Compose:** Creating Android-specific screens with Jetpack Compose for modern UI development.
 
 **Navigation System:** Compose Navgraph
 
-## Shared Screen:
+# Shared Screen:
 **Compose Multiplatform:** Utilizing Compose Multiplatform to share screens between Android and iOS.
+
+
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
