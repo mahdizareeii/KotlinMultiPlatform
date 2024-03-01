@@ -25,7 +25,7 @@
 		0F3B40802B91C5DB00DED79F /* FlowPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B407F2B91C5DB00DED79F /* FlowPublisher.swift */; };
 		0F3B40822B91CFA800DED79F /* ViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40812B91CFA800DED79F /* ViewObserver.swift */; };
 		0F3B40852B91EA7A00DED79F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40842B91EA7A00DED79F /* Router.swift */; };
-		0F3B408B2B91EC2C00DED79F /* AppNavGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B408A2B91EC2C00DED79F /* AppNavGraph.swift */; };
+		0F3B408B2B91EC2C00DED79F /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B408A2B91EC2C00DED79F /* NavigationUtil.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* TestComposeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* TestComposeContent.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 		0F3B407F2B91C5DB00DED79F /* FlowPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowPublisher.swift; sourceTree = "<group>"; };
 		0F3B40812B91CFA800DED79F /* ViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObserver.swift; sourceTree = "<group>"; };
 		0F3B40842B91EA7A00DED79F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		0F3B408A2B91EC2C00DED79F /* AppNavGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavGraph.swift; sourceTree = "<group>"; };
+		0F3B408A2B91EC2C00DED79F /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* KotlinMultiPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinMultiPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* TestComposeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComposeContent.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0F3B40842B91EA7A00DED79F /* Router.swift */,
-				0F3B408A2B91EC2C00DED79F /* AppNavGraph.swift */,
+				0F3B408A2B91EC2C00DED79F /* NavigationUtil.swift */,
 			);
 			path = navgraph;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				0F3B40852B91EA7A00DED79F /* Router.swift in Sources */,
 				0F3B40762B8DDF3E00DED79F /* ShimmerView.swift in Sources */,
 				0F3B406E2B8C880600DED79F /* ProductComponent.swift in Sources */,
-				0F3B408B2B91EC2C00DED79F /* AppNavGraph.swift in Sources */,
+				0F3B408B2B91EC2C00DED79F /* NavigationUtil.swift in Sources */,
 				0F3B40792B8F31C000DED79F /* ProductViewContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

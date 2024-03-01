@@ -27,7 +27,10 @@ struct NavigationModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background {
-                NavigationLink(destination: route.builder, isActive: $isActive) {
+                NavigationLink(
+                    destination: route.builder,
+                    isActive: $isActive
+                ) {
                     EmptyView()
                 }
                 .hidden()

@@ -45,8 +45,6 @@ fun ProductViewScreen(
                 text = args?.title ?: "",
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 18.sp,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
             )
         }
         item { Spacer(modifier.size(1.dp)) }
@@ -56,8 +54,6 @@ fun ProductViewScreen(
                 text = args?.description ?: "",
                 fontWeight = FontWeight.Light,
                 fontSize = 14.sp,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis
             )
         }
     }
