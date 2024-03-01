@@ -31,7 +31,6 @@ fun ProductViewScreen(
         item {
             AsyncImage(
                 modifier = Modifier
-                    .padding(horizontal = 8.dp)
                     .fillMaxWidth()
                     .height(200.dp),
                 model = args?.image.toString(),
@@ -42,6 +41,7 @@ fun ProductViewScreen(
         item { Spacer(modifier.size(3.dp)) }
         item {
             Text(
+                modifier = Modifier.padding(horizontal = 8.dp),
                 text = args?.title ?: "",
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 18.sp,
@@ -52,6 +52,7 @@ fun ProductViewScreen(
         item { Spacer(modifier.size(1.dp)) }
         item {
             Text(
+                modifier = Modifier.padding(horizontal = 8.dp),
                 text = args?.description ?: "",
                 fontWeight = FontWeight.Light,
                 fontSize = 14.sp,

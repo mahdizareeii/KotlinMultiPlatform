@@ -1,11 +1,9 @@
 package viewmodel
 
 import com.rickclephas.kmm.viewmodel.coroutineScope
-import componentdata.products.ProductComponentData
 import domain.mapper.products.ProductsSectionMapper
 import domain.usecase.products.GetProductsUseCase
-import event.ProductEvent
-import kotlinx.coroutines.delay
+import event.ProductsEvent
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import navigationargs.ProductViewArgs
@@ -16,7 +14,7 @@ import util.Switch
 open class ProductsViewModel(
     private val getProductsUseCase: GetProductsUseCase,
     private val productsSectionMapper: ProductsSectionMapper
-) : BaseViewModel<ProductsUiState, ProductEvent>() {
+) : BaseViewModel<ProductsUiState, ProductsEvent>() {
     init {
         getProducts()
     }
@@ -44,7 +42,7 @@ open class ProductsViewModel(
 
     fun onProductComponentClicked(data: ProductViewArgs) {
         viewModelScope.coroutineScope.launch {
-            _events.emit(ProductEvent.NavigateToProductViewScreen(data))
+            _events.emit(ProductsEvent.NavigateToProductViewScreen(data))
         }
     }
 }

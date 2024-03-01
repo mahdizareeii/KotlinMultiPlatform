@@ -15,7 +15,8 @@ import KMMViewModelSwiftUI
 struct ProductsContent : View {
     
     @StateViewModel var productsViewModel = GetIosViewModel().getProductsViewModel()
-    @State var isProductViewActive = false
+    
+    @State var route: Router = .empty
     
     var body: some View {
         ScrollView(.vertical){
@@ -37,14 +38,9 @@ struct ProductsContent : View {
                     EmptyView()
                 }
             }
-        }.background(
-            NavigationLink(
-                destination: ProductViewContent(),
-                isActive: $isProductViewActive
-            ) { EmptyView() }
-        ).onReceive(sharePublisher(productsViewModel.events())) { event in
+        }.onReceive(sharePublisher(productsViewModel.events())) { event in
             handleViewModelEvents(event: event)
-        }
+        }.navigation(route: $route)
     }
     
     @ViewBuilder
@@ -70,15 +66,11 @@ struct ProductsContent : View {
         }
     }
     
-    private func handleViewModelEvents(event: ProductEvent) {
+    private func handleViewModelEvents(event: ProductsEvent) {
         switch event {
-        case is ProductEvent.NavigateToProductViewScreen:
-            print("NavigateToProductViewScreen event")
-            isProductViewActive = true
-        case is ProductEvent.Initial:
-            print("Initial event")
-        default:
-            print("default event")
+        case let event as ProductsEvent.NavigateToProductViewScreen: route = .ProductView(args: event.args)
+        case is ProductsEvent.Initial: print("Initial event")
+        default: print("default event")
         }
     }
 }
