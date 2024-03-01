@@ -20,12 +20,16 @@ open class BaseViewModel<UiState, Events> : KMMViewModel() {
         BaseUiState.InitialUiState<UiState>()
     )
 
+    //use this annotation to use in ios
     @NativeCoroutinesState
     val uiState = _uiState.asStateFlow()
 
     //https://github.com/adeo-opensource/kviewmodel--mpp/blob/22b994b532da76024ff9c20d0771a32a7c810afc/kviewmodel/src/commonMain/kotlin/com/adeo/kviewmodel/BaseSharedViewModel.kt
-    //to observe in ios
-    public fun viewStates(): WrappedStateFlow<BaseUiState<UiState>> = WrappedStateFlow(_uiState.asStateFlow())
-    public fun viewEvents(): WrappedSharedFlow<Events?> = WrappedSharedFlow(_events.asSharedFlow())
+    //to use in ios
+    //don't forget to use ObservingView
+    public fun uiStates(): WrappedStateFlow<BaseUiState<UiState>> = WrappedStateFlow(_uiState.asStateFlow())
+
+    //to use is ios
+    public fun events(): WrappedSharedFlow<Events?> = WrappedSharedFlow(_events.asSharedFlow())
 
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A view modifier that applies an animated "shimmer" to any view, typically to show that an operation is in progress.
-public struct Shimmer: ViewModifier {
+public struct ShimmerView: ViewModifier {
     private let animation: Animation
     private let gradient: Gradient
     private let min, max: CGFloat
@@ -105,12 +105,12 @@ public extension View {
     /// 20% of the extent of the gradient.
     @ViewBuilder func shimmering(
         active: Bool = true,
-        animation: Animation = Shimmer.defaultAnimation,
-        gradient: Gradient = Shimmer.defaultGradient,
+        animation: Animation = ShimmerView.defaultAnimation,
+        gradient: Gradient = ShimmerView.defaultGradient,
         bandSize: CGFloat = 0.3
     ) -> some View {
         if active {
-            modifier(Shimmer(animation: animation, gradient: gradient, bandSize: bandSize))
+            modifier(ShimmerView(animation: animation, gradient: gradient, bandSize: bandSize))
         } else {
             self
         }

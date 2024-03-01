@@ -21,7 +21,7 @@ struct ProductsSkeleton: View {
                         .padding(.horizontal, 8)
                 }
             }
-            .modifier(Shimmer())
+            .modifier(ShimmerView())
         }
     }
 }

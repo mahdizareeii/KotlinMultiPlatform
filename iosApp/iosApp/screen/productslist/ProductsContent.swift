@@ -42,7 +42,7 @@ struct ProductsContent : View {
                 destination: ProductViewContent(),
                 isActive: $isProductViewActive
             ) { EmptyView() }
-        ).onReceive(sharePublisher(productsViewModel.viewEvents())) { event in
+        ).onReceive(sharePublisher(productsViewModel.events())) { event in
             handleViewModelEvents(event: event)
         }
     }
