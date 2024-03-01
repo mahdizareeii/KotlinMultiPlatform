@@ -1,7 +1,7 @@
 package domain.model.products
 
 data class ProductResponseDomain(
-    val description: String,
+    val desc: String,
     val endDate: String,
     val id: Int,
     val image: String,

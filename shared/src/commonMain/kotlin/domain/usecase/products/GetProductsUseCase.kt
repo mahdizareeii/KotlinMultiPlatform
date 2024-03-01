@@ -13,7 +13,7 @@ class GetProductsUseCase(
             Result.success(
                 result.getOrNull()?.map {
                     ProductResponseDomain(
-                        description = it.description ?: "",
+                        desc = it.description ?: "",
                         endDate = it.endDate ?: "",
                         id = it.id ?: 0,
                         image = it.image ?: "",

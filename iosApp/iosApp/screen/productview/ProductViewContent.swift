@@ -40,7 +40,7 @@ struct ProductViewContent: View {
                 
                 Spacer().frame(height: 1)
                 
-                Text(args?.description_ ?? "")
+                Text(args?.desc ?? "")
                     .fontWeight(.light)
                     .font(.system(size: 14))
                     .padding(.horizontal, 8)

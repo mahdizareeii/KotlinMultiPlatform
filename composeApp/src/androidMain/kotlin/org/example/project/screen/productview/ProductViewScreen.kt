@@ -51,7 +51,7 @@ fun ProductViewScreen(
         item {
             Text(
                 modifier = Modifier.padding(horizontal = 8.dp),
-                text = args?.description ?: "",
+                text = args?.desc ?: "",
                 fontWeight = FontWeight.Light,
                 fontSize = 14.sp,
             )

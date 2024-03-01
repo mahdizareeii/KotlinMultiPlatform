@@ -32,7 +32,7 @@ struct ProductComponent: View {
                 
                 Spacer().frame(height: 0).padding(3)
                 
-                Text(data.description)
+                Text(data.desc)
                     .font(Font.system(size: 10, weight: .light))
                     .lineLimit(3)
                     .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
@@ -43,7 +43,7 @@ struct ProductComponent: View {
 struct ProductComponent_Preview: PreviewProvider {
     static var previews: some View {
         ProductComponent(
-            data: ProductComponentData(id:"id", image: "test", title: "test", description: "description")
+            data: ProductComponentData(id:"id", image: "test", title: "test", desc: "description")
         )
     }
 }

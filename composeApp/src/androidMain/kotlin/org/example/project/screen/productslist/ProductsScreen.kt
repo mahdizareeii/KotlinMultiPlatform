@@ -52,7 +52,7 @@ fun ProductsScreen(
                                     ProductViewArgs(
                                         _id = it.id,
                                         _title = it.title,
-                                        _description = it.description,
+                                        _desc = it.desc,
                                         _image = it.image
                                     )
                                 )

@@ -12,7 +12,7 @@ class ProductsSectionMapper : BaseMapper<List<ProductResponseDomain>, List<BaseC
                 id = it.id.toString(),
                 image = it.image,
                 title = it.title,
-                description = it.description
+                desc = it.desc
             )
         }
     }

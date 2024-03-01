@@ -55,7 +55,7 @@ struct ProductsContent : View {
                         data: ProductViewArgs(
                             _id: productData.id,
                             _title: productData.title,
-                            _description: productData.description,
+                            _desc: productData.desc,
                             _image: productData.image
                         )
                     )

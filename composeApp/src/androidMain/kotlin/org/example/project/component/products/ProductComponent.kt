@@ -41,7 +41,7 @@ fun ProductComponent(
             )
             Spacer(modifier.size(1.dp))
             Text(
-                text = data.description,
+                text = data.desc,
                 fontWeight = FontWeight.Light,
                 fontSize = 10.sp,
                 maxLines = 3,
