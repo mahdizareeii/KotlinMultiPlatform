@@ -2,13 +2,13 @@ package viewmodel
 
 import com.rickclephas.kmm.viewmodel.KMMViewModel
 import com.rickclephas.kmm.viewmodel.MutableStateFlow
-import com.rickclephas.kmp.nativecoroutines.NativeCoroutines
-import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesRefined
 import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import state.BaseUiState
+import util.WrappedSharedFlow
+import util.WrappedStateFlow
 
 open class BaseViewModel<UiState, Events> : KMMViewModel() {
 
@@ -22,5 +22,10 @@ open class BaseViewModel<UiState, Events> : KMMViewModel() {
 
     @NativeCoroutinesState
     val uiState = _uiState.asStateFlow()
+
+    //https://github.com/adeo-opensource/kviewmodel--mpp/blob/22b994b532da76024ff9c20d0771a32a7c810afc/kviewmodel/src/commonMain/kotlin/com/adeo/kviewmodel/BaseSharedViewModel.kt
+    //to observe in ios
+    public fun viewStates(): WrappedStateFlow<BaseUiState<UiState>> = WrappedStateFlow(_uiState.asStateFlow())
+    public fun viewEvents(): WrappedSharedFlow<Events?> = WrappedSharedFlow(_events.asSharedFlow())
 
 }

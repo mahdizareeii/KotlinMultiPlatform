@@ -12,10 +12,15 @@ struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ProductsContent().tabItem {
+                NavigationView {
+                    ProductsContent().navigationBarHidden(false)
+                }.tabItem {
                     Text("Specific Ui").font(.system(size: 12, weight:.black))
                 }
-                SharedClockScreenContent().tabItem {
+                
+                NavigationView {
+                    SharedClockScreenContent().navigationBarHidden(false)
+                }.tabItem {
                     Text("Shared Ui").font(.system(size: 12, weight: .regular))
                 }
             }

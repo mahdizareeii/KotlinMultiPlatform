@@ -30,8 +30,9 @@ kotlin {
             }
         }
     }
-    
-    jvm("desktop")
+
+    //comment desktop
+    //jvm("desktop")
     
     listOf(
         iosX64(),
@@ -45,7 +46,8 @@ kotlin {
     }
     
     sourceSets {
-        val desktopMain by getting
+        //comment desktop
+        //val desktopMain by getting
         
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
@@ -66,9 +68,10 @@ kotlin {
         iosMain.dependencies {
 
         }
-        desktopMain.dependencies {
+        //comment desktop
+        /*desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
-        }
+        }*/
     }
 }
 

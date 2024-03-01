@@ -43,7 +43,7 @@ struct ProductComponent: View {
 struct ProductComponent_Preview: PreviewProvider {
     static var previews: some View {
         ProductComponent(
-            data: ProductComponentData(image: "test", title: "test", description: "description")
+            data: ProductComponentData(id:"id", image: "test", title: "test", description: "description")
         )
     }
 }

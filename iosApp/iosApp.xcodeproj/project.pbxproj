@@ -21,6 +21,8 @@
 		0F3B40702B8CAE9000DED79F /* SharedClockScreenContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */; };
 		0F3B40732B8DDDE600DED79F /* ProductsSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40722B8DDDE600DED79F /* ProductsSkeleton.swift */; };
 		0F3B40762B8DDF3E00DED79F /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40752B8DDF3E00DED79F /* Shimmer.swift */; };
+		0F3B40792B8F31C000DED79F /* ProductViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B40782B8F31C000DED79F /* ProductViewContent.swift */; };
+		0F3B40802B91C5DB00DED79F /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B407F2B91C5DB00DED79F /* Publisher.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* TestComposeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* TestComposeContent.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClockScreenContent.swift; sourceTree = "<group>"; };
 		0F3B40722B8DDDE600DED79F /* ProductsSkeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSkeleton.swift; sourceTree = "<group>"; };
 		0F3B40752B8DDF3E00DED79F /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
+		0F3B40782B8F31C000DED79F /* ProductViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewContent.swift; sourceTree = "<group>"; };
+		0F3B407F2B91C5DB00DED79F /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* KotlinMultiPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinMultiPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* TestComposeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComposeContent.swift; sourceTree = "<group>"; };
@@ -69,7 +73,8 @@
 		0F3B40562B88B20E00DED79F /* screen */ = {
 			isa = PBXGroup;
 			children = (
-				0F3B40712B8DDC8C00DED79F /* products */,
+				0F3B40772B8F316500DED79F /* productview */,
+				0F3B40712B8DDC8C00DED79F /* productslist */,
 				7555FF82242A565900829871 /* TestComposeContent.swift */,
 				0F3B406F2B8CAE9000DED79F /* SharedClockScreenContent.swift */,
 			);
@@ -92,21 +97,30 @@
 			path = wrapper;
 			sourceTree = "<group>";
 		};
-		0F3B40712B8DDC8C00DED79F /* products */ = {
+		0F3B40712B8DDC8C00DED79F /* productslist */ = {
 			isa = PBXGroup;
 			children = (
 				0F3B40582B88B2E500DED79F /* ProductsContent.swift */,
 				0F3B40722B8DDDE600DED79F /* ProductsSkeleton.swift */,
 			);
-			path = products;
+			path = productslist;
 			sourceTree = "<group>";
 		};
 		0F3B40742B8DDF0F00DED79F /* swiftuiutil */ = {
 			isa = PBXGroup;
 			children = (
 				0F3B40752B8DDF3E00DED79F /* Shimmer.swift */,
+				0F3B407F2B91C5DB00DED79F /* Publisher.swift */,
 			);
 			path = swiftuiutil;
+			sourceTree = "<group>";
+		};
+		0F3B40772B8F316500DED79F /* productview */ = {
+			isa = PBXGroup;
+			children = (
+				0F3B40782B8F31C000DED79F /* ProductViewContent.swift */,
+			);
+			path = productview;
 			sourceTree = "<group>";
 		};
 		42799AB246E5F90AF97AA0EF /* Frameworks */ = {
@@ -265,10 +279,12 @@
 				0F3B40702B8CAE9000DED79F /* SharedClockScreenContent.swift in Sources */,
 				7555FF83242A565900829871 /* TestComposeContent.swift in Sources */,
 				0F3B406A2B8A132400DED79F /* KMMViewModel.swift in Sources */,
+				0F3B40802B91C5DB00DED79F /* Publisher.swift in Sources */,
 				0F3B40732B8DDDE600DED79F /* ProductsSkeleton.swift in Sources */,
 				0F3B40592B88B2E500DED79F /* ProductsContent.swift in Sources */,
 				0F3B40762B8DDF3E00DED79F /* Shimmer.swift in Sources */,
 				0F3B406E2B8C880600DED79F /* ProductComponent.swift in Sources */,
+				0F3B40792B8F31C000DED79F /* ProductViewContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
