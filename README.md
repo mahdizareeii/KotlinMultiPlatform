@@ -1,7 +1,7 @@
 This is a Kotlin Multiplatform project targeting Android, iOS
 
 <img width="300" alt="2" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/4fc6f30d-1828-4668-b3e0-ad046ddd9bc0">
-<img width="746" alt="3" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/44ea5136-8053-4027-9cf4-f9dcc8cfc84b">
+<img width="300" alt="3" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/44ea5136-8053-4027-9cf4-f9dcc8cfc84b">
 <img width="300" alt="1" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/56589fcc-93d8-4c5f-91f6-cef8a26bc87e">
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
