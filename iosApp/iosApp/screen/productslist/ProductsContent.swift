@@ -20,7 +20,7 @@ struct ProductsContent : View {
     var body: some View {
         ScrollView(.vertical){
             LazyVStack(){
-                switch statePublisher(productsViewModel.viewStates()) {
+                switch productsViewModel.uiState {
                 case is BaseUiStateInitialUiState<ProductsUiState>: EmptyView()
                 case is BaseUiStateLoadingUiState<ProductsUiState>: ProductsSkeleton()
                 case is BaseUiStateEmptyUiState<ProductsUiState>: Text("Empty")
