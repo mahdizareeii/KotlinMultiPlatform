@@ -26,10 +26,10 @@ open class BaseViewModel<UiState, Events> : KMMViewModel() {
 
     //https://github.com/adeo-opensource/kviewmodel--mpp/blob/22b994b532da76024ff9c20d0771a32a7c810afc/kviewmodel/src/commonMain/kotlin/com/adeo/kviewmodel/BaseSharedViewModel.kt
     //to use in ios
-    //don't forget to use ObservingView
-    public fun uiStates(): WrappedStateFlow<BaseUiState<UiState>> = WrappedStateFlow(_uiState.asStateFlow())
+    //don't forget use ObservingView
+    protected fun uiStates(): WrappedStateFlow<BaseUiState<UiState>> = WrappedStateFlow(_uiState.asStateFlow())
 
     //to use is ios
-    public fun events(): WrappedSharedFlow<Events?> = WrappedSharedFlow(_events.asSharedFlow())
+    protected fun events(): WrappedSharedFlow<Events?> = WrappedSharedFlow(_events.asSharedFlow())
 
 }
