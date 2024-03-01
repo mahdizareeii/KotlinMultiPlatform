@@ -17,13 +17,21 @@ Utilizing the KMM-ViewModel library for sharing business logic.
 ### Koin for dependency injection.
 
 ## iOS Side:
-Swift UI: Crafting iOS-specific screens with Swift UI for native iOS experiences.
-Custom Navgraph: Implementing custom navigation graphs for Swift UI screens.
-StateFlow & SharedFlow: Implementing StateFlow and SharedFlow publishers to observe changes from the ViewModel.
+### Swift UI: 
+Crafting iOS-specific screens with Swift UI for native iOS experiences.
 
+### Navigation System: 
+Implementing custom navigation graphs for Swift UI screens.
+
+### StateFlow & SharedFlow Publisher: 
+Implementing StateFlow and SharedFlow publishers to observe changes from the ViewModel.
 
 ## Android Side:
-Compose: Creating Android-specific screens with Jetpack Compose for modern UI development.
+### Compose: 
+Creating Android-specific screens with Jetpack Compose for modern UI development.
+
+### Navigation System:
+Compose Navgraph
 
 ## Shared Screen:
 Compose Multiplatform: Utilizing Compose Multiplatform to share screens between Android and iOS.
