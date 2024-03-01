@@ -4,12 +4,17 @@ This is a Kotlin Multiplatform project targeting Android, iOS
 <img width="300" alt="3" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/44ea5136-8053-4027-9cf4-f9dcc8cfc84b">
 <img width="300" alt="1" src="https://github.com/mahdizareeii/KotlinMultiPlatform/assets/34120686/56589fcc-93d8-4c5f-91f6-cef8a26bc87e">
 
-## Kotlin Multiplatform project! 🚀
+# Kotlin Multiplatform project! 🚀
 
-Architecture: Clean Architecture, Domain-Driven Design, and MVI.
-Shared View Model: Utilizing the KMM-ViewModel library for sharing business logic.
-Ktor for efficient networking.
-Koin for dependency injection.
+### Architecture: 
+Clean Architecture, Domain-Driven Design, MVI.
+
+### Shared View Model: 
+Utilizing the KMM-ViewModel library for sharing business logic.
+
+### Ktor for efficient networking.
+
+### Koin for dependency injection.
 
 ## iOS Side:
 Swift UI: Crafting iOS-specific screens with Swift UI for native iOS experiences.
